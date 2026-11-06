@@ -81,7 +81,7 @@ pub fn devices() -> Vec<Device> {
 pub fn feed(totals: Shared) {
     let start = Instant::now();
     let dt = STEP.as_secs_f64();
-    for step in 0u64.. {
+    for step in 0..=u64::MAX {
         let now = start.elapsed().as_secs_f64();
         {
             let mut t = totals.lock().unwrap();
