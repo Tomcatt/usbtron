@@ -1,0 +1,18 @@
+[package]
+name = "usbtron"
+version = "0.1.0"
+edition = "2024"
+license = "BSD-3-Clause"
+description = "btop-style live USB bandwidth, topology and error monitor for Linux"
+repository = "https://github.com/Tomcatt/usbtron"
+readme = "README.md"
+keywords = ["usb", "monitor", "tui", "linux", "usbmon"]
+categories = ["command-line-utilities", "hardware-support"]
+
+[dependencies]
+libc = "0.2"
+ratatui = "0.30.2"
+
+[profile.release]
+lto = true
+strip = true
